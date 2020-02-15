@@ -1,0 +1,47 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        
+        int t;
+        Scanner sc = new Scanner(System.in);
+        t = sc.nextInt();
+        
+        while(t>0){
+           
+        int n;
+        n = sc.nextInt();
+        
+        int[] arr = new int[n];
+        
+        for(int i = 0; i < n ; i++){
+            arr[i] = sc.nextInt();
+        }
+       
+        int d = sc.nextInt();
+        int rotate = d + 1;
+        
+        int[] new_arr = new int[n];
+        
+        StringBuffer ans = new StringBuffer();
+        
+        for(int i = 0; i < n ; i++){
+            if(i+d < n){
+                new_arr[i] = arr[i + d];
+                ans.append(new_arr[i]+" " );
+            }else{
+                new_arr[i] = arr[i + d - n];
+                ans.append(new_arr[i]+" " );
+            }
+        }
+        
+             System.out.println(ans.toString());
+
+
+      
+        t--;
+        }
+
+    }
+    
+}
