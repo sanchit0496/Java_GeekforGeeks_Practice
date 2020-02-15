@@ -1,0 +1,44 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        
+        int t;
+        Scanner sc = new Scanner(System.in);
+        t = sc.nextInt();
+        
+        while(t>0){
+           
+           int[] a = new int[3];
+           int[] b = new int[3];
+
+        //filling a
+        
+        for(int i = 0; i < 3; i++){
+            a[i] = sc.nextInt();
+        }
+        
+        for(int i = 0; i < 3; i++){
+            b[i] = sc.nextInt();
+        }
+        
+        int sc_a = 0;
+        int sc_b = 0;
+        
+        for(int i = 0; i < 3; i++){
+            if(a[i] > b[i]){
+                sc_a = sc_a + 1;
+            }else if(a[i] < b[i]){
+                sc_b = sc_b + 1;
+            }
+           
+        }
+        System.out.println(sc_a + " " + sc_b);
+        t--;
+        }
+    
+    
+        
+    }
+    
+}
