@@ -12,14 +12,16 @@ public class Main {
         int n;
         n = sc.nextInt();
         
-        int[] arr = new int[n];
+        int[] all = new int[n];
         
         for(int i = 0; i < n ; i++){
             for(int j = 1; j <= n ; j++){
-                arr[i] = j;
+                all[i] = j;
             }
             break;
         }
+        
+        int sum_all = n*(n+1)/2;
         
         int[] picked = new int[n-1];
 
@@ -27,13 +29,15 @@ public class Main {
             picked[i] = sc.nextInt();
         }
 
-       for(int i = 0; i < n ; i++){
-            for(int j = 0; j < n-1 ; j++){
-                if(picked[j] == arr[i]){
-                    System.out.println(picked[j]);
-                }
-            }
+       int sum_picked = 0;
+       for(int i = 0; i < n-1 ; i++){
+            sum_picked = sum_picked + picked[i];
         }
+        
+        int missing = sum_all - sum_picked;
+        System.out.println(missing);
+        System.out.println();
+
         
         t--;
         }
