@@ -1,0 +1,43 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        
+        int t;
+        Scanner sc = new Scanner(System.in);
+        t = sc.nextInt();
+        
+        while(t>0){
+           
+        int n;
+        n = sc.nextInt();
+        
+        int[] arr = new int[n];
+        
+        for(int i = 0; i < n ; i++){
+            for(int j = 1; j <= n ; j++){
+                arr[i] = j;
+            }
+            break;
+        }
+        
+        int[] picked = new int[n-1];
+
+        for(int i = 0; i < n-1 ; i++){
+            picked[i] = sc.nextInt();
+        }
+
+       for(int i = 0; i < n ; i++){
+            for(int j = 0; j < n-1 ; j++){
+                if(picked[j] == arr[i]){
+                    System.out.println(picked[j]);
+                }
+            }
+        }
+        
+        t--;
+        }
+
+    }
+    
+}
