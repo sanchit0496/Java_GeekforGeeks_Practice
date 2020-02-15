@@ -1,0 +1,56 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        
+        int t;
+        Scanner sc = new Scanner(System.in);
+        t = sc.nextInt();
+        
+        while(t>0){
+           
+           int n;
+           n = sc.nextInt();
+           int[] arr = new int[n];
+            
+            //input array
+            for(int i=0;i<n;i++){
+                arr[i] = sc.nextInt();
+            }
+           
+           //largest element
+            int largest = arr[0];    
+            for(int i = 0; i <n; i++){
+              if(arr[i] > largest){
+                  largest = arr[i];
+                  int torem = i;
+              }
+           }
+           int torem = i;
+           int nlen = n -1;
+           //remove the largest element by shifting
+            for(int j = i; j < nlen; j++){
+                    arr[j] = arr[j+1];
+            }
+           //smallest element
+            int smallest = arr[0];    
+            for( int i = 0; i <n; i++){
+              if(arr[i] < smallest){
+                  smallest = arr[i];
+              }
+           }
+           
+           //remove the smallest element by shifting
+            for(int j = i; j < nlen - 1; j++){
+                    arr[j] = arr[j+1];
+            }
+           System.out.println(arr);
+            t--;
+            
+        }
+    
+    
+        
+    }
+    
+}
