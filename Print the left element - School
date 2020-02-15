@@ -19,18 +19,12 @@ public class Main {
             }
            
             Arrays.sort(arr);
-            
-            /*if n is odd, then mid + 1 
-            and if n is even, then mid
-            */
-            
-                if(n % 2 != 0){
-                    System.out.println(arr[n/2]);
-                }else{
-                    System.out.println(arr[n/2 + 1]);   
-                }
-            
-        
+ 
+            if(n%2!=0){
+                System.out.println(arr[n/2]);
+            }else{
+                System.out.println(arr[(n-1)/2]);
+            }
             t--;
         }
     
