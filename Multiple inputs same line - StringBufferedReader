@@ -1,0 +1,21 @@
+import java.lang.*;
+import java.io.*;
+
+public class Main{
+	public static void main (String[] args) throws Exception
+	 {
+	    BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+               int T=Integer.parseInt(br.readLine());
+
+               while(T>0){
+                    String[] nk=br.readLine().trim().split(" ");
+                    int n=Integer.parseInt(nk[0]);
+                    int k=Integer.parseInt(nk[1]);
+                    System.out.println(n);
+
+                    System.out.println(k);
+                  
+                T--;
+               }
+	 }
+}
